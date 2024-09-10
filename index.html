@@ -1,0 +1,47 @@
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA PDF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>IA PDF</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Formulario para seleccionar PDF y escribir un texto -->
+      <form id="uploadForm">
+        <div class="form-group">
+          <label for="pdfFile">Subir PDF:</label>
+          <input type="file" id="pdfFile" accept="application/pdf" required>
+        </div>
+
+        <div class="form-group">
+          <label for="textInput">Texto:</label>
+          <textarea id="textInput" rows="4" cols="50" required></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <!-- Spinner para mostrar que la solicitud está en curso -->
+      <div id="spinner" class="spinner"></div>
+    </div>
+
+    <!-- Cuadro de texto para mostrar la respuesta -->
+    <section>
+      <h2>Respuesta del servidor:</h2>
+      <textarea id="responseText" rows="6" cols="60" readonly></textarea>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
