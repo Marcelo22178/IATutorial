@@ -1,6 +1,6 @@
 const form = document.getElementById("uploadForm");
 const spinner = document.getElementById("spinner");
-
+const url = "https://prod-142.westus.logic.azure.com:443/workflows/5e1bb5c1fa1a48c3866b407bdcb7e2ac/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Bze6Nn3bKex4fZA3FZaOTqSHDDYKZ5PCnKZUgCb2Slk" // tu link 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -28,7 +28,7 @@ form.addEventListener("submit", async (e) => {
 
       // Hacer la petición POST al servidor
       const response = await fetch(
-        "https://prod-142.westus.logic.azure.com:443/workflows/5e1bb5c1fa1a48c3866b407bdcb7e2ac/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Bze6Nn3bKex4fZA3FZaOTqSHDDYKZ5PCnKZUgCb2Slk",
+        url,
         {
           method: "POST",
           headers: {
